@@ -253,7 +253,7 @@ int main(int argc, char *argv[]) {
 |----------|--------------|-------------------------|-----------|---------|---------|---------|---------|---------|
 |          | System reset | Route SMI to serial IRQ | Pin 97-66 | Pin 100 | Pin 101 | Pin 102 | Pin 113 | Pin 115 |
 | 0        | Normal operation | Disable | ROM Signal | IRRX1 | COPEN | PLED | FANIO2 | FANOUT2  |
-| 1        |   Reset Chip  | Emable | GP25-GP62 |   GP24  |   GP23  |   GP22  |   GP21  |   GP20  |
+| 1        |   Reset Chip  | Enable | GP25-GP62 |   GP24  |   GP23  |   GP22  |   GP21  |   GP20  |
 
 #### Работа с регистрами LDN8
 
