@@ -1,9 +1,32 @@
+/*
+ * GPIO interface for VT1211 Super I/O chip
+ *
+ * Copyright 2018 by Roman Serov <roman@serov.co>
+ * 
+ * This file is part of VT1211 GPIO interface.
+ *
+ * VT1211 GPIO interface is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * VT1211 GPIO interface is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with VT1211 GPIO interface. If not, see <http://www.gnu.org/licenses/>.
+ * 
+ * @license GPL-3.0+ <http://spdx.org/licenses/GPL-3.0+>
+*/
+
 #ifndef VT1211_H
 #define VT1211_H
 
 #include <linux/init.h>
 #include <linux/module.h>
-#include <linux/moduleparam.h>
+#include <linux/mogduleparam.h>
 #include <linux/gpio.h>
 #include <linux/gpio/driver.h>
 #include <linux/slab.h>
