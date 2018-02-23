@@ -1,4 +1,4 @@
-#VT1211 GPIO Kernel module
+# VT1211 GPIO Kernel module
 
 Модуль ядра Linux для работы с портами GPIO Super I/O контроллера VIA VT1211. Тестирование проводилось на одноплатных компьютерах Avalue ECM-CX700 под Debian GNU/Linux (Stretch), ядро 4.9.0-5-686. Дальнейшее изложение пойдёт в контексте этого компьютера с этим дистрибутивом.
 
@@ -13,9 +13,9 @@
 
 Получаем исходники и собираем
 
-```shell
+```
 # cd /usr/src
-# git clone 
+# git clone https://github.com/manfredmann/vt1211_gpio_k.git
 # cd vt1211_gpio_k
 # make
 ```
@@ -29,7 +29,7 @@
 
 Загружаем модуль
 
-```shell
+```
 # insmod vt1211_gpio.ko
 # dmesg | tail -n 2
 [45075.398517] VT1211: GPIO init
@@ -49,15 +49,15 @@ crw-------  1 root root    254,   0 фев 23 13:31 gpiochip0
 
 ### libgpiod
 
-Библиотека для работы с символьными устройствами gpio. В репозитариях Debian она отсутствует, т.к. появилась совсем недавно. Так что вам придётся собрать её ручками.
+Библиотека для работы с символьными устройствами gpio. В репозиториях Debian она отсутствует, т.к. появилась совсем недавно. Так что вам придётся собрать её ручками.
 
-[git репозитарий на kernel.org](https://git.kernel.org/pub/scm/libs/libgpiod/libgpiod.git/about/)
+[git репозиторий на kernel.org](https://git.kernel.org/pub/scm/libs/libgpiod/libgpiod.git/about/)
 
 Там же вы найдёте документацию.
 
 Вывод утилиты gpioinfo из состава библотеки
 
-```shell
+```
 # gpioinfo 
 gpiochip0 - 8 lines:
         line   0: "vt1211_gp10" unused input active-high
@@ -72,8 +72,8 @@ gpiochip0 - 8 lines:
 
 Вывод с включёнными портами с 3 по 6
 
-```shell
-# gpioinfo 
+```
+# gpioinfo
 gpiochip0 - 35 lines:
         line   0: "vt1211_gp10" unused input active-high
         line   1: "vt1211_gp11" unused input active-high
@@ -152,7 +152,7 @@ int main(int argc, char *argv[]) {
 
 Соберём пример
 
-```shell
+```
 # gcc main.c -lgpiod -o vt1211_test
 ```
 
