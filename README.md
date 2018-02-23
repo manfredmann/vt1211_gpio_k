@@ -7,7 +7,7 @@
 Для сборки модуля необходимо установить пакеты build-essential, linux-headers и linux-headers-common для вашего ядра
 
 Пример:
-```shell
+```
 # apt install build-essential linux-headers-4.9.0-5-686 linux-headers-4.9.0-5-common
 ```
 
