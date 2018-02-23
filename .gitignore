@@ -1,0 +1,11 @@
+*.o
+*.o.cmd
+*.mod.c
+*.mod.o
+*.ko.cmd
+*.mod.o.cmd
+*.ko
+modules.order
+Module.symvers
+.clang_complete
+.tmp_versions/*
