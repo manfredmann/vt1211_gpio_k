@@ -282,7 +282,7 @@ int main(int argc, char *argv[]) {
 
 |DB15|DB14|DB13|DB12|DB11|DB10|DB9|DB8|DB7|DB6|DB5|DB4|DB3|DB2|DB1|DB0|
 |----|----|----|----|----|----|---|---|---|---|---|---|---|---|---|---|
-|BAR |BAR |BAR |BAR |BAR |BAR |BAR|BAR|BAR|BAR|BAR|BAR| 0 | 0 | 0 | 0 |
+| BA | BA | BA | BA | BA | BA | BA| BA| BA| BA| BA| BA| 0 | 0 | 0 | 0 |
 
 ###### F0h GPIO Port Select
 
