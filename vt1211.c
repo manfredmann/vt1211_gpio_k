@@ -161,13 +161,13 @@ static int vt1211_init(u8 ports) {
 
   if (ports & VT_CONFIG_PORT_1) {
     vt1211_port_as_gpio(VT_CONFIG_PORT_1);
-    gpio_data->io_size = 1;
+    gpio_data->io_size = VT_PORT_1_OFFSET + 1;
     port_selected = true;
   }
 
   if (ports & VT_CONFIG_PORT_3_6) {
     vt1211_port_as_gpio(VT_CONFIG_PORT_3_6);
-    gpio_data->io_size = 4;
+    gpio_data->io_size = VT_PORT_6_OFFSET + 1;
     port_selected = true;
   }
 
