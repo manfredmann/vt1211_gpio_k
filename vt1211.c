@@ -23,13 +23,13 @@
 
 #include "vt1211.h"
 
-static bool param_port_1 = true;
-static bool param_port_3_6 = false;
+static bool port_1 = true;
+static bool port_3_6 = false;
 
-module_param(param_port_1, bool, 0644);
-module_param(param_port_3_6, bool, 0644);
-MODULE_PARM_DESC(param_port_1, "PORT1 Enable");
-MODULE_PARM_DESC(param_port_3_6, "From PORT3 to PORT6 Enable");
+module_param(port_1, bool, 0644);
+module_param(port_3_6, bool, 0644);
+MODULE_PARM_DESC(port_1, "PORT1 Enable");
+MODULE_PARM_DESC(port_3_6, "From PORT3 to PORT6 Enable");
 
 struct vt1211_gpio {
   struct gpio_chip chip;
@@ -308,12 +308,12 @@ static int __init vt1211_gpio_init( void ) {
 
   u16 ports = 0;
 
-  if (param_port_1) {
+  if (port_1) {
     ports |= VT_CONFIG_PORT_1;
     vt1211_gpio->chip.ngpio += VT_MAX_GPIO_PORT1;
   }
 
-  if (param_port_3_6) {
+  if (port_3_6) {
     ports |= VT_CONFIG_PORT_3_6;
     vt1211_gpio->chip.ngpio += VT_MAX_GPIO_PORT3_6;
   }
@@ -352,11 +352,11 @@ static int __init vt1211_gpio_init( void ) {
 
     u8 port = 1 + (i / 8);
 
-    if (port != 1 && param_port_1) {
+    if (port != 1 && port_1) {
       ++port;
     }
 
-    if (!param_port_1 && param_port_3_6) {
+    if (!port_1 && port_3_6) {
       port += 2;
     }
 
