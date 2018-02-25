@@ -142,7 +142,7 @@ int main(int argc, char *argv[]) {
   }
 
   line = gpiod_chip_get_line(chip, 0);
-  if (!chip) {
+  if (!line) {
     gpiod_chip_close(chip);
     printf("Couldn't get line 0\n");
     return -1;
