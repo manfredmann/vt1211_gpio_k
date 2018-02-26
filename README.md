@@ -14,11 +14,11 @@
 
 ## Сборка и загрузка модуля
 
-Для сборки модуля необходимо установить пакеты build-essential, linux-headers и linux-headers-common для вашего ядра
+Для сборки модуля необходимо установить пакеты git, build-essential, а также linux-headers и linux-headers-common для вашего ядра
 
 Пример:
 ```
-# apt install build-essential linux-headers-4.9.0-5-686 linux-headers-4.9.0-5-common
+# apt install git build-essential linux-headers-4.9.0-5-686 linux-headers-4.9.0-5-common
 ```
 
 Получаем исходники и собираем
@@ -65,7 +65,7 @@ crw-------  1 root root    254,   0 фев 23 13:31 gpiochip0
 
 Там же вы найдёте документацию.
 
-Вывод утилиты gpioinfo из состава библотеки
+Вывод утилиты gpioinfo из состава библиотеки
 
 ```
 # gpioinfo 
