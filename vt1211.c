@@ -148,7 +148,7 @@ static int vt1211_init(u8 ports) {
   struct vt1211_gpio *gpio_data = &vt1211_gpio_chip;
 
   u16 id_rev;
-  bool port_selected;
+  bool port_selected = false;
 
   id_rev = vt1211_get_id_and_rev();
 
